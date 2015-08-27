@@ -289,7 +289,7 @@ body {
             display:table;
             clear: both;
             width: 100%;
-            border-bottom: 2px solid @border-color-red;
+            border-bottom: 1px solid @border-color-red;
         }
     }
 
@@ -332,12 +332,14 @@ body {
     width: 20%;
     float: right;
     font-size: (@font-size+2);
-    outline: 1px dotted green;
     font-size: (@font-size+2);
     line-height: (@line-height - 6);
     text-align: right;
     @media (max-width:760px) {
-    margin-bottom: 20px;     
+    margin-bottom: 20px;
+    @media (max-width:760px){
+        width: 60%;   
+    }    
      }
     &__container{
         display:inline-block;
@@ -593,13 +595,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    @media (max-width:1180px){
+    @media (max-width:930px){
             display: block;
         } 
 }
 .blog-item{
     width: 31%;
-    @media (max-width:1180px) {
+    @media (max-width:930px) {
             width: 100%;
     } 
     @media (max-width:760px){
@@ -608,7 +610,7 @@ body {
     &__img{
         display: block;
         margin-bottom: 15px;
-        @media (max-width:1180px) and (min-width:760px) {
+        @media (max-width:930px) and (min-width:760px) {
             float: left;
             width: 40%;
             margin-right: 40px;
@@ -622,7 +624,7 @@ body {
         }    
     }
     &__description{
-        @media (max-width:1180px) and (min-width:760px) {
+        @media (max-width:930px) and (min-width:760px) {
             float: left;
             width: 50%;
         } 
@@ -671,8 +673,12 @@ body {
     background-color: @bg-color-brown;
     color: @text-color-white;
     @media (max-width:1180px){
-        padding: 40px 0;
+        padding: 40px 10px;
         padding-bottom: 75px;
+    }
+    @media (max-width:760px) {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 .footer-menu{
@@ -686,7 +692,6 @@ body {
             display:table;
             clear: both;
             width: 100%;
-            border-bottom: 2px solid @border-color-red;
         }
     }    
 }
